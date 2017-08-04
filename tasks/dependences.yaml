@@ -1,0 +1,35 @@
+---
+
+- name: Update package repositories
+  sudo: yes
+  apt:
+    update_cache: True
+  tags:
+    - apt
+    - update_cache
+
+- name: Install superslacker package dependencies
+  sudo: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+  register: install_superslacker_package_dependencies
+  when: _superslacker_package_dependencies is defined
+  with_items: _superslacker_package_dependencies
+  tags:
+    - apt
+    - dependencies
+- debug: var=install_superslacker_package_dependencies.stdout_lines
+
+- name: Install superslacker dependencies
+  sudo: yes
+  apt:
+    name: "{{ item.name }}"
+    state: present
+  register: install_superslacker_dependencies
+  when: _superslacker_dependencies is defined
+  with_items: _superslacker_dependencies
+  tags:
+    - apt
+    - dependencies
+- debug: var=install_superslacker_dependencies.stdout_lines

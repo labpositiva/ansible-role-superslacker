@@ -1,0 +1,27 @@
+---
+# vars file for superslacker
+
+_supervisor_path_conf: "/etc/supervisor/conf.d"
+
+# _superslacker_package_dependencies:
+#   - "wget"
+#   - "curl"
+
+_superslacker_dependencies:
+  - name: "python2.7-dev"
+    version: ""
+  - name: "python-dev"
+    version: ""
+  - name: "python-pip"
+
+_superslacker_pip_dependencies:
+  - name: "superslacker"
+    version: "0.0.2"
+
+_superslacker_templates:
+  - src: "superslacker.conf.j2"
+    dest: "superslacker.conf"
+
+_superslacker_apps_supervisor:
+  - name: "fatalslacker"
+    state: "restarted"
