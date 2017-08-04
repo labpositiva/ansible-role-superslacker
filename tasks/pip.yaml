@@ -1,0 +1,7 @@
+---
+
+- name: Install packages via pip
+  sudo: yes
+  pip: name="{{ item.name }}" version="{{ item.version }}"
+  when: _superslacker_pip_dependencies is defined
+  with_items: _superslacker_pip_dependencies
