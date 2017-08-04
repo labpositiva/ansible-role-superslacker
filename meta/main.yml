@@ -4,7 +4,7 @@ galaxy_info:
   author: Luis Mayta
   description: Ansible role to services Superslacker
   company: Labpositiva
-  version: 0.0.0
+  version: 0.0.1
   license: Mit
   min_ansible_version: 1.6
   platforms:
