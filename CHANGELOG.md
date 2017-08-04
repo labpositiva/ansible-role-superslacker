@@ -4,6 +4,8 @@ This file uses change log convention from [Keep a CHANGELOG](http://keepachangel
 
 ## [Unreleased]
 
+## [0.0.1] - 2017-08-04
+
 
 [unreleased]: https://github.com/labpositiva/ansible-role-superslacker/compare/0.0.1...HEAD
 [0.0.1]: https://github.com/labpositiva/ansible-role-superslacker/compare/0.0.0...0.0.1
