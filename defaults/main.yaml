@@ -1,0 +1,6 @@
+---
+# defaults file for superslacker
+
+superslacker_token: SUPERSLACKER_TOKEN
+superslacker_channel: SUPERSLACKER_CHANNEL
+superslacker_host: SUPERSLACKER_HOST

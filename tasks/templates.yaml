@@ -1,0 +1,9 @@
+---
+
+- name: copy template
+  sudo: yes
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ _supervisor_path_conf }}/{{ item.dest }}"
+  with_items: _superslacker_templates
+  when: _superslacker_templates is defined

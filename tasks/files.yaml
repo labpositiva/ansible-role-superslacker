@@ -1,0 +1,10 @@
+---
+
+- name: Create files
+  sudo: yes
+  file:
+    path: "{{ item.path }}"
+    state: "{{ item.state }}"
+    owner: "{{ item.owner }}"
+  with_items: _superslacker_create_files
+  when: _superslacker_create_files is defined

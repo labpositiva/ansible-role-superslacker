@@ -1,0 +1,11 @@
+---
+
+- name: reloaded apps supervisor
+  sudo: yes
+  supervisorctl: name="{{ item.name }}" state="{{ item.state }}"
+  when: _superslacker_apps_supervisor
+  with_items: _superslacker_apps_supervisor
+  tags:
+    - webserver
+    - wait
+    - deployment
